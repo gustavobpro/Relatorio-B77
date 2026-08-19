@@ -18,12 +18,14 @@
         .tab-btn:hover { color: white; }
         #radio-geral:checked ~ .tabs-nav label[for="radio-geral"],
         #radio-pagamentos:checked ~ .tabs-nav label[for="radio-pagamentos"],
+        #radio-compras-etapa:checked ~ .tabs-nav label[for="radio-compras-etapa"],
         #radio-responsavel:checked ~ .tabs-nav label[for="radio-responsavel"] {
             color: white; border-bottom-color: #ED7D31;
         }
         .tab-panel { display: none; }
         #radio-geral:checked ~ .content #tab-geral,
         #radio-pagamentos:checked ~ .content #tab-pagamentos,
+        #radio-compras-etapa:checked ~ .content #tab-compras-etapa,
         #radio-responsavel:checked ~ .content #tab-responsavel {
             display: block;
         }
@@ -151,7 +153,7 @@
             .header .subtitle { font-size: 11px; }
             .content { padding: 10px; }
             .tabs-nav { padding: 0 6px; }
-            .tab-btn { font-size: 12px; padding: 12px 4px; }
+            .tab-btn { font-size: 10.5px; padding: 10px 2px; line-height: 1.25; }
             .section-title { font-size: 13px; padding: 10px; margin: 14px 0 10px 0; }
             .cards-container { grid-template-columns: 1fr 1fr; gap: 8px; }
             .card { padding: 14px 8px; }
@@ -243,10 +245,12 @@
         </div>
         <input type="radio" name="relatorio-tabs" id="radio-geral" class="tab-radio-input" checked>
         <input type="radio" name="relatorio-tabs" id="radio-pagamentos" class="tab-radio-input">
+        <input type="radio" name="relatorio-tabs" id="radio-compras-etapa" class="tab-radio-input">
         <input type="radio" name="relatorio-tabs" id="radio-responsavel" class="tab-radio-input">
         <div class="tabs-nav">
             <label class="tab-btn" for="radio-geral">📊 Visão Geral</label>
             <label class="tab-btn" for="radio-pagamentos">💰 Pagamentos</label>
+            <label class="tab-btn" for="radio-compras-etapa">🏗️ Compras por Etapa</label>
             <label class="tab-btn" for="radio-responsavel">👤 Responsável</label>
         </div>
         <div class="content">
@@ -280,7 +284,7 @@
                 <div class="bars-container">
                 <div class="bar-group">
                     <div class="bar-pair">
-                        <div class="bar bar-pago" style="height: 68.39721151842497%;">
+                        <div class="bar bar-pago" style="height: 67.05913866342196%;">
                             <span class="bar-label bar-label-middle">R$ 32.906,97</span>
                         </div>
                         <div class="bar bar-a-pagar" style="height: 0.0%;">
@@ -291,7 +295,7 @@
                 </div>
                 <div class="bar-group">
                     <div class="bar-pair">
-                        <div class="bar bar-pago" style="height: 68.93916899660738%;">
+                        <div class="bar bar-pago" style="height: 67.59049368319967%;">
                             <span class="bar-label bar-label-middle">R$ 33.167,71</span>
                         </div>
                         <div class="bar bar-a-pagar" style="height: 0.0%;">
@@ -303,7 +307,7 @@
                 <div class="bar-group">
                     <div class="bar-pair">
                         <div class="bar bar-pago" style="height: 100.0%;">
-                            <span class="bar-label bar-label-middle">R$ 48.111,56</span>
+                            <span class="bar-label bar-label-middle">R$ 49.071,56</span>
                         </div>
                         <div class="bar bar-a-pagar" style="height: 0.0%;">
                             
@@ -313,7 +317,7 @@
                 </div>
                 <div class="bar-group">
                     <div class="bar-pair">
-                        <div class="bar bar-pago" style="height: 6.968279484511837%;">
+                        <div class="bar bar-pago" style="height: 6.831957178129684%;">
                             <span class="bar-label bar-label-top">R$ 3.352,55</span>
                         </div>
                         <div class="bar bar-a-pagar" style="height: 0.0%;">
@@ -321,17 +325,6 @@
                         </div>
                     </div>
                     <div class="bar-month">AGO/26</div>
-                </div>
-                <div class="bar-group">
-                    <div class="bar-pair">
-                        <div class="bar bar-pago" style="height: 1.9953624243803112%;">
-                            <span class="bar-label bar-label-top">R$ 960,00</span>
-                        </div>
-                        <div class="bar bar-a-pagar" style="height: 0.0%;">
-                            
-                        </div>
-                    </div>
-                    <div class="bar-month">SET/26</div>
                 </div>
                 </div>
             </div>
@@ -342,12 +335,12 @@
                         <div class="etapa-info">
                             <div class="etapa-nome">Fundação</div>
                             <div class="etapa-valores">
-                                <span class="etapa-valor">R$ 9.450,50</span>
-                                <span class="etapa-pct">(7.4%)</span>
+                                <span class="etapa-valor">R$ 9.535,00</span>
+                                <span class="etapa-pct">(7.5%)</span>
                             </div>
                         </div>
                         <div class="etapa-bar-bg">
-                            <div class="etapa-bar-fill" style="width: 7.411064536003423%; background: #4472C4;"></div>
+                            <div class="etapa-bar-fill" style="width: 7.477329283165068%; background: #4472C4;"></div>
                         </div>
                     </div>
                     <div class="etapa-item">
@@ -433,12 +426,12 @@
                         <div class="etapa-info">
                             <div class="etapa-nome">Elétrica</div>
                             <div class="etapa-valores">
-                                <span class="etapa-valor">R$ 10.905,17</span>
-                                <span class="etapa-pct">(8.6%)</span>
+                                <span class="etapa-valor">R$ 11.270,17</span>
+                                <span class="etapa-pct">(8.8%)</span>
                             </div>
                         </div>
                         <div class="etapa-bar-bg">
-                            <div class="etapa-bar-fill" style="width: 8.551813021009174%; background: #E67E22;"></div>
+                            <div class="etapa-bar-fill" style="width: 8.838045360819835%; background: #E67E22;"></div>
                         </div>
                     </div>
                     <div class="etapa-item">
@@ -465,32 +458,6 @@
                         </div>
                         <div class="etapa-bar-bg">
                             <div class="etapa-bar-fill" style="width: 35.43007428122101%; background: #795548;"></div>
-                        </div>
-                    </div>
-                    <div class="etapa-item">
-                        <div class="etapa-color" style="background: #999999;"></div>
-                        <div class="etapa-info">
-                            <div class="etapa-nome">FUNDAÇÃA</div>
-                            <div class="etapa-valores">
-                                <span class="etapa-valor">R$ 84,50</span>
-                                <span class="etapa-pct">(0.1%)</span>
-                            </div>
-                        </div>
-                        <div class="etapa-bar-bg">
-                            <div class="etapa-bar-fill" style="width: 0.06626474716164621%; background: #999999;"></div>
-                        </div>
-                    </div>
-                    <div class="etapa-item">
-                        <div class="etapa-color" style="background: #999999;"></div>
-                        <div class="etapa-info">
-                            <div class="etapa-nome">ELÉTRICO</div>
-                            <div class="etapa-valores">
-                                <span class="etapa-valor">R$ 365,00</span>
-                                <span class="etapa-pct">(0.3%)</span>
-                            </div>
-                        </div>
-                        <div class="etapa-bar-bg">
-                            <div class="etapa-bar-fill" style="width: 0.28623233981066115%; background: #999999;"></div>
                         </div>
                     </div>
             </div>
@@ -1262,7 +1229,7 @@
                         <td class="mat-num mat-qtd-total" data-label="Qtd. Total">1.00</td>
                         <td class="mat-num" data-label="Custo UND Médio">R$ 365,00</td>
                         <td class="mat-num mat-total" data-label="Custo Total">R$ 365,00</td>
-                        <td class="mat-etapa" data-label="Etapa(s)">ELÉTRICO</td>
+                        <td class="mat-etapa" data-label="Etapa(s)">Elétrica</td>
                     </tr>
                     <tr class="linha-material" data-produto="luva">
                         <td class="mat-produto" data-label="Produto">LUVA</td>
@@ -1535,7 +1502,7 @@
                         <td class="mat-num mat-qtd-total" data-label="Qtd. Total">5.00</td>
                         <td class="mat-num" data-label="Custo UND Médio">R$ 16,90</td>
                         <td class="mat-num mat-total" data-label="Custo Total">R$ 84,50</td>
-                        <td class="mat-etapa" data-label="Etapa(s)">FUNDAÇÃA</td>
+                        <td class="mat-etapa" data-label="Etapa(s)">Fundação</td>
                     </tr>
                     <tr class="linha-material" data-produto="pá tramontina">
                         <td class="mat-produto" data-label="Produto">PÁ TRAMONTINA</td>
@@ -2287,7 +2254,7 @@
                     </tr>
                     <tr class="linha-material" data-produto="lustre arandela e lampada">
                         <td class="mat-produto" data-label="Produto">LUSTRE ARANDELA E LAMPADA</td>
-                        <td class="mat-etapa" data-label="Etapa"><span class="mat-etapa-dot" style="background:#999999;"></span>ELÉTRICO</td>
+                        <td class="mat-etapa" data-label="Etapa"><span class="mat-etapa-dot" style="background:#E67E22;"></span>Elétrica</td>
                         <td class="mat-num" data-label="Quantidade">1.00</td>
                         <td class="mat-num" data-label="Custo UND">R$ 365,00</td>
                         <td class="mat-num mat-total" data-label="Custo Total">R$ 365,00</td>
@@ -2707,7 +2674,7 @@
                     </tr>
                     <tr class="linha-material" data-produto="prego 17x21">
                         <td class="mat-produto" data-label="Produto">PREGO 17X21</td>
-                        <td class="mat-etapa" data-label="Etapa"><span class="mat-etapa-dot" style="background:#999999;"></span>FUNDAÇÃA</td>
+                        <td class="mat-etapa" data-label="Etapa"><span class="mat-etapa-dot" style="background:#4472C4;"></span>Fundação</td>
                         <td class="mat-num" data-label="Quantidade">5.00</td>
                         <td class="mat-num" data-label="Custo UND">R$ 16,90</td>
                         <td class="mat-num mat-total" data-label="Custo Total">R$ 84,50</td>
@@ -3758,14 +3725,9 @@
                         <td class="valor" data-label="Valor">R$ 3.500,00</td>
                     </tr>
                     <tr class="linha-fornecedor-pago">
-                        <td class="fornecedor" data-label="Fornecedor">IVAN</td>
-                        <td class="vencimento" data-label="Data">7 pagamentos</td>
-                        <td class="valor" data-label="Valor">R$ 3.164,50</td>
-                    </tr>
-                    <tr class="linha-parcela-pago">
-                        <td class="fornecedor-nome" data-label="Fornecedor">MASSA ACRÍLICA</td>
-                        <td class="vencimento" data-label="Data">22/09/2026</td>
-                        <td class="valor" data-label="Valor">R$ 960,00</td>
+                        <td class="fornecedor" data-label="Fornecedor">IVAN BONFILIT</td>
+                        <td class="vencimento" data-label="Data">9 pagamentos</td>
+                        <td class="valor" data-label="Valor">R$ 3.300,50</td>
                     </tr>
                     <tr class="linha-parcela-pago">
                         <td class="fornecedor-nome" data-label="Fornecedor">TINTA STANDARD NEVE</td>
@@ -3776,6 +3738,16 @@
                         <td class="fornecedor-nome" data-label="Fornecedor">TINTA ECONOMICA NEVE</td>
                         <td class="vencimento" data-label="Data">04/08/2026</td>
                         <td class="valor" data-label="Valor">R$ 270,00</td>
+                    </tr>
+                    <tr class="linha-parcela-pago">
+                        <td class="fornecedor-nome" data-label="Fornecedor">AC 2 BONFILIT</td>
+                        <td class="vencimento" data-label="Data">01/08/2026</td>
+                        <td class="valor" data-label="Valor">R$ 111,00</td>
+                    </tr>
+                    <tr class="linha-parcela-pago">
+                        <td class="fornecedor-nome" data-label="Fornecedor">AC 1 BONFILIT</td>
+                        <td class="vencimento" data-label="Data">01/08/2026</td>
+                        <td class="valor" data-label="Valor">R$ 25,00</td>
                     </tr>
                     <tr class="linha-parcela-pago">
                         <td class="fornecedor-nome" data-label="Fornecedor">AC 2 BONFILIT</td>
@@ -3796,6 +3768,11 @@
                         <td class="fornecedor-nome" data-label="Fornecedor">AC 2 BONFILIT</td>
                         <td class="vencimento" data-label="Data">23/07/2026</td>
                         <td class="valor" data-label="Valor">R$ 925,00</td>
+                    </tr>
+                    <tr class="linha-parcela-pago">
+                        <td class="fornecedor-nome" data-label="Fornecedor">MASSA ACRÍLICA</td>
+                        <td class="vencimento" data-label="Data">22/07/2026</td>
+                        <td class="valor" data-label="Valor">R$ 960,00</td>
                     </tr>
                     <tr class="linha-fornecedor-pago">
                         <td class="fornecedor" data-label="Fornecedor">ELETRICISTA</td>
@@ -4517,26 +4494,1883 @@
                         <td class="vencimento" data-label="Data">04/08/2026</td>
                         <td class="valor" data-label="Valor">R$ 8,10</td>
                     </tr>
-                    <tr class="linha-fornecedor-pago">
-                        <td class="fornecedor" data-label="Fornecedor">IVAN BONFILIT</td>
-                        <td class="vencimento" data-label="Data">2 pagamentos</td>
-                        <td class="valor" data-label="Valor">R$ 136,00</td>
-                    </tr>
-                    <tr class="linha-parcela-pago">
-                        <td class="fornecedor-nome" data-label="Fornecedor">AC 2 BONFILIT</td>
-                        <td class="vencimento" data-label="Data">01/08/2026</td>
-                        <td class="valor" data-label="Valor">R$ 111,00</td>
-                    </tr>
-                    <tr class="linha-parcela-pago">
-                        <td class="fornecedor-nome" data-label="Fornecedor">AC 1 BONFILIT</td>
-                        <td class="vencimento" data-label="Data">01/08/2026</td>
-                        <td class="valor" data-label="Valor">R$ 25,00</td>
-                    </tr>
                     <tr class="linha-unica-pago">
                         <td class="fornecedor" data-label="Fornecedor">CENTER CÓPIAS</td>
                         <td class="vencimento" data-label="Data">19/05/2026</td>
                         <td class="valor" data-label="Valor">R$ 15,00</td>
                     </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-compras-etapa" class="tab-panel">
+                <div class="section-title">TOTAL GASTO POR ETAPA - B77</div>
+                <div class="etapas-container">
+                    <div class="etapa-item">
+                        <div class="etapa-color" style="background: #795548;"></div>
+                        <div class="etapa-info">
+                            <div class="etapa-nome">Mão de Obra</div>
+                            <div class="etapa-valores">
+                                <span class="etapa-valor">R$ 45.180,00</span>
+                                <span class="etapa-pct">(Pago: R$ 45.180,00 · A Pagar: R$ 0,00)</span>
+                            </div>
+                        </div>
+                        <div class="etapa-bar-bg">
+                            <div class="etapa-bar-fill" style="width: 100.0%; background: #795548;"></div>
+                        </div>
+                    </div>
+                    <div class="etapa-item">
+                        <div class="etapa-color" style="background: #ED7D31;"></div>
+                        <div class="etapa-info">
+                            <div class="etapa-nome">Levante</div>
+                            <div class="etapa-valores">
+                                <span class="etapa-valor">R$ 25.815,27</span>
+                                <span class="etapa-pct">(Pago: R$ 25.815,27 · A Pagar: R$ 0,00)</span>
+                            </div>
+                        </div>
+                        <div class="etapa-bar-bg">
+                            <div class="etapa-bar-fill" style="width: 57.1387118193891%; background: #ED7D31;"></div>
+                        </div>
+                    </div>
+                    <div class="etapa-item">
+                        <div class="etapa-color" style="background: #A5A5A5;"></div>
+                        <div class="etapa-info">
+                            <div class="etapa-nome">Telhado</div>
+                            <div class="etapa-valores">
+                                <span class="etapa-valor">R$ 13.994,08</span>
+                                <span class="etapa-pct">(Pago: R$ 13.994,08 · A Pagar: R$ 0,00)</span>
+                            </div>
+                        </div>
+                        <div class="etapa-bar-bg">
+                            <div class="etapa-bar-fill" style="width: 30.974051350154934%; background: #A5A5A5;"></div>
+                        </div>
+                    </div>
+                    <div class="etapa-item">
+                        <div class="etapa-color" style="background: #FFC000;"></div>
+                        <div class="etapa-info">
+                            <div class="etapa-nome">Acabamento</div>
+                            <div class="etapa-valores">
+                                <span class="etapa-valor">R$ 13.239,96</span>
+                                <span class="etapa-pct">(Pago: R$ 13.239,96 · A Pagar: R$ 0,00)</span>
+                            </div>
+                        </div>
+                        <div class="etapa-bar-bg">
+                            <div class="etapa-bar-fill" style="width: 29.304914785303225%; background: #FFC000;"></div>
+                        </div>
+                    </div>
+                    <div class="etapa-item">
+                        <div class="etapa-color" style="background: #E67E22;"></div>
+                        <div class="etapa-info">
+                            <div class="etapa-nome">Elétrica</div>
+                            <div class="etapa-valores">
+                                <span class="etapa-valor">R$ 11.270,17</span>
+                                <span class="etapa-pct">(Pago: R$ 11.270,17 · A Pagar: R$ 0,00)</span>
+                            </div>
+                        </div>
+                        <div class="etapa-bar-bg">
+                            <div class="etapa-bar-fill" style="width: 24.945037627268707%; background: #E67E22;"></div>
+                        </div>
+                    </div>
+                    <div class="etapa-item">
+                        <div class="etapa-color" style="background: #4472C4;"></div>
+                        <div class="etapa-info">
+                            <div class="etapa-nome">Fundação</div>
+                            <div class="etapa-valores">
+                                <span class="etapa-valor">R$ 9.535,00</span>
+                                <span class="etapa-pct">(Pago: R$ 9.535,00 · A Pagar: R$ 0,00)</span>
+                            </div>
+                        </div>
+                        <div class="etapa-bar-bg">
+                            <div class="etapa-bar-fill" style="width: 21.104469676848165%; background: #4472C4;"></div>
+                        </div>
+                    </div>
+                    <div class="etapa-item">
+                        <div class="etapa-color" style="background: #2980B9;"></div>
+                        <div class="etapa-info">
+                            <div class="etapa-nome">Hidráulica</div>
+                            <div class="etapa-valores">
+                                <span class="etapa-valor">R$ 3.193,22</span>
+                                <span class="etapa-pct">(Pago: R$ 3.193,22 · A Pagar: R$ 0,00)</span>
+                            </div>
+                        </div>
+                        <div class="etapa-bar-bg">
+                            <div class="etapa-bar-fill" style="width: 7.067773351040284%; background: #2980B9;"></div>
+                        </div>
+                    </div>
+                    <div class="etapa-item">
+                        <div class="etapa-color" style="background: #8E44AD;"></div>
+                        <div class="etapa-info">
+                            <div class="etapa-nome">Serralheiro</div>
+                            <div class="etapa-valores">
+                                <span class="etapa-valor">R$ 1.850,00</span>
+                                <span class="etapa-pct">(Pago: R$ 1.850,00 · A Pagar: R$ 0,00)</span>
+                            </div>
+                        </div>
+                        <div class="etapa-bar-bg">
+                            <div class="etapa-bar-fill" style="width: 4.094732182381585%; background: #8E44AD;"></div>
+                        </div>
+                    </div>
+                    <div class="etapa-item">
+                        <div class="etapa-color" style="background: #C0392B;"></div>
+                        <div class="etapa-info">
+                            <div class="etapa-nome">Equipamento</div>
+                            <div class="etapa-valores">
+                                <span class="etapa-valor">R$ 1.817,70</span>
+                                <span class="etapa-pct">(Pago: R$ 1.817,70 · A Pagar: R$ 0,00)</span>
+                            </div>
+                        </div>
+                        <div class="etapa-bar-bg">
+                            <div class="etapa-bar-fill" style="width: 4.023240371845949%; background: #C0392B;"></div>
+                        </div>
+                    </div>
+                    <div class="etapa-item">
+                        <div class="etapa-color" style="background: #34495E;"></div>
+                        <div class="etapa-info">
+                            <div class="etapa-nome">Documentação</div>
+                            <div class="etapa-valores">
+                                <span class="etapa-valor">R$ 1.623,39</span>
+                                <span class="etapa-pct">(Pago: R$ 1.623,39 · A Pagar: R$ 0,00)</span>
+                            </div>
+                        </div>
+                        <div class="etapa-bar-bg">
+                            <div class="etapa-bar-fill" style="width: 3.593160690571049%; background: #34495E;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-title">LANÇAMENTOS AGRUPADOS POR ETAPA - B77</div>
+                
+                <div class="resp-bloco">
+                    <div class="resp-bloco-titulo">
+                        <span class="etapa-color" style="background:#795548;"></span>
+                        Mão de Obra
+                        <span class="resp-bloco-total">R$ 45.180,00</span>
+                    </div>
+                    <div class="table-wrapper" style="border:none; border-radius:0;">
+                    <table class="materiais-table tabela-empilhavel">
+                        <thead>
+                            <tr><th>Fornecedor</th><th>Produto</th><th>Data</th><th>Status</th><th>Valor</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Fornecedor">JANISSON C SANTOS</td>
+                            <td data-label="Produto">MÃO DE OBRA PINTURA</td>
+                            <td data-label="Data">14/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.250,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">JO L SILVA PEREIRA</td>
+                            <td data-label="Produto">MÃO DE OBRA CERAMISTA</td>
+                            <td data-label="Data">03/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 150,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">VICTOR ANDRADE SILVA</td>
+                            <td data-label="Produto">MÃO DE OBRA BANCADA</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.640,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">JO L SILVA PEREIRA</td>
+                            <td data-label="Produto">MÃO DE OBRA CERAMISTA</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 3.500,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">LACERDA SOLUÇÕES ELÉTRICAS</td>
+                            <td data-label="Produto">MÃO DE OBRA ELÉTRICA</td>
+                            <td data-label="Data">30/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 750,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">KAIO SILVA PEREIRA</td>
+                            <td data-label="Produto">MÃO DE OBRA PEDREIRO</td>
+                            <td data-label="Data">25/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 4.000,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">JANISSON C SANTOS</td>
+                            <td data-label="Produto">MÃO DE OBRA PINTURA</td>
+                            <td data-label="Data">24/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.500,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ELIEL ANCHIETA DOS SANTOS</td>
+                            <td data-label="Produto">MÃO DE OBRA GESSO</td>
+                            <td data-label="Data">20/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 5.250,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">KAIO SILVA PEREIRA</td>
+                            <td data-label="Produto">MÃO DE OBRA PEDREIRO</td>
+                            <td data-label="Data">17/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 2.000,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">EMERSON CLINTON LACERDA</td>
+                            <td data-label="Produto">MÃO DE OBRA ELÉTRICA</td>
+                            <td data-label="Data">16/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 750,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ISMAEL DIAS DA SILVA</td>
+                            <td data-label="Produto">MÃO OBRA TELHADO</td>
+                            <td data-label="Data">02/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 2.000,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ISMAEL DIAS DA SILVA</td>
+                            <td data-label="Produto">MÃO OBRA TELHADO</td>
+                            <td data-label="Data">27/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.000,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">KAIO SILVA PEREIRA</td>
+                            <td data-label="Produto">MÃO DE OBRA PEDREIRO</td>
+                            <td data-label="Data">26/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 8.490,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">KAIO SILVA PEREIRA</td>
+                            <td data-label="Produto">MÃO DE OBRA PEDREIRO</td>
+                            <td data-label="Data">12/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 7.350,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">KAIO SILVA PEREIRA</td>
+                            <td data-label="Produto">MÃO DE OBRA PEDREIRO</td>
+                            <td data-label="Data">29/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 3.250,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">KAIO SILVA PEREIRA</td>
+                            <td data-label="Produto">MÃO DE OBRA PEDREIRO</td>
+                            <td data-label="Data">15/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 2.300,00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                <div class="resp-bloco">
+                    <div class="resp-bloco-titulo">
+                        <span class="etapa-color" style="background:#ED7D31;"></span>
+                        Levante
+                        <span class="resp-bloco-total">R$ 25.815,27</span>
+                    </div>
+                    <div class="table-wrapper" style="border:none; border-radius:0;">
+                    <table class="materiais-table tabela-empilhavel">
+                        <thead>
+                            <tr><th>Fornecedor</th><th>Produto</th><th>Data</th><th>Status</th><th>Valor</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CIMENTO</td>
+                            <td data-label="Data">15/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 3.650,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">AREAL RUA NOVA</td>
+                            <td data-label="Produto">AREIA</td>
+                            <td data-label="Data">25/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 600,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">AREAL RUA NOVA</td>
+                            <td data-label="Produto">AREIA</td>
+                            <td data-label="Data">17/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 850,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CIMENTO</td>
+                            <td data-label="Data">12/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 3.650,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CIMENTO</td>
+                            <td data-label="Data">11/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 720,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ABC COMERCIAL DE FERRAGENS</td>
+                            <td data-label="Produto">NEUTROL 18</td>
+                            <td data-label="Data">08/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 399,99</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CAIXA PREGO</td>
+                            <td data-label="Data">08/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 30,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CAIXA ARAME</td>
+                            <td data-label="Data">08/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 15,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">LAJOTA</td>
+                            <td data-label="Data">08/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.120,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">O FERREIRÃO</td>
+                            <td data-label="Produto">VERGALHÃO 5X16 12MT 8MM</td>
+                            <td data-label="Data">05/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 240,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BN PRÉ MOLDADOS</td>
+                            <td data-label="Produto">CANALETA 09X19X39</td>
+                            <td data-label="Data">05/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 632,40</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">O FERREIRÃO</td>
+                            <td data-label="Produto">COLUNA 5X16 8MM 7X17 1MT</td>
+                            <td data-label="Data">30/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 216,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BN PRÉ MOLDADOS</td>
+                            <td data-label="Produto">BLOCO DE CONCRETO 14X19X39</td>
+                            <td data-label="Data">20/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.360,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BN PRÉ MOLDADOS</td>
+                            <td data-label="Produto">CANALETA 14X19X39</td>
+                            <td data-label="Data">20/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 919,60</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">AREAL RUA NOVA</td>
+                            <td data-label="Produto">AREIA</td>
+                            <td data-label="Data">15/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 850,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">PAULO CASER</td>
+                            <td data-label="Produto">TABUA PINUS 30</td>
+                            <td data-label="Data">14/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 380,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">PAULO CASER</td>
+                            <td data-label="Produto">TABUA PINUS 10</td>
+                            <td data-label="Data">14/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 130,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">PAULO CASER</td>
+                            <td data-label="Produto">EUCALIPTO 7X25</td>
+                            <td data-label="Data">14/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 350,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">PAULO CASER</td>
+                            <td data-label="Produto">ESCORAS</td>
+                            <td data-label="Data">14/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 400,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">PAULO CASER</td>
+                            <td data-label="Produto">CAIBROS</td>
+                            <td data-label="Data">14/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 90,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">PAULO CASER</td>
+                            <td data-label="Produto">TABUAS EUCALIPTO 15X25</td>
+                            <td data-label="Data">14/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 560,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">PAULO CASER</td>
+                            <td data-label="Produto">FRETE</td>
+                            <td data-label="Data">14/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 100,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MIX MATERIAIS PARA CONST.</td>
+                            <td data-label="Produto">VEDALIT BALDE 18L PLASTIFICANTE</td>
+                            <td data-label="Data">13/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 360,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">JR AMORIM</td>
+                            <td data-label="Produto">Lajota 29 CM</td>
+                            <td data-label="Data">11/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 5.762,88</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">JR AMORIM</td>
+                            <td data-label="Produto">Lajota 19 CM</td>
+                            <td data-label="Data">11/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 950,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BN PRÉ MOLDADOS</td>
+                            <td data-label="Produto">BLOCO DE CONCRETO 14X19X39</td>
+                            <td data-label="Data">06/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 387,20</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BN PRÉ MOLDADOS</td>
+                            <td data-label="Produto">CANALETA 14X19X39</td>
+                            <td data-label="Data">06/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 459,80</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BN PRÉ MOLDADOS</td>
+                            <td data-label="Produto">CANALETA 09X19X39</td>
+                            <td data-label="Data">06/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 632,40</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                <div class="resp-bloco">
+                    <div class="resp-bloco-titulo">
+                        <span class="etapa-color" style="background:#A5A5A5;"></span>
+                        Telhado
+                        <span class="resp-bloco-total">R$ 13.994,08</span>
+                    </div>
+                    <div class="table-wrapper" style="border:none; border-radius:0;">
+                    <table class="materiais-table tabela-empilhavel">
+                        <thead>
+                            <tr><th>Fornecedor</th><th>Produto</th><th>Data</th><th>Status</th><th>Valor</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Fornecedor">LOPES MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">TELHA CERÂMICA BRANCA 2 FACE KARINA</td>
+                            <td data-label="Data">30/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 2.288,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">LOPES MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">TELHA CERÂMICA BRANCA 1 FACE KARINA</td>
+                            <td data-label="Data">30/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 3.753,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">LOPES MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">CUMEEIRA BRANCA KARINA</td>
+                            <td data-label="Data">30/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 254,25</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MIX MATERIAIS PARA CONST.</td>
+                            <td data-label="Produto">MANTA TERMICA ALUMINIO 1 FACE</td>
+                            <td data-label="Data">23/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 250,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MIX MATERIAIS PARA CONST.</td>
+                            <td data-label="Produto">MANTA TERMICA ALUMINIO 1 FACE</td>
+                            <td data-label="Data">23/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 249,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">O FERREIRÃO</td>
+                            <td data-label="Produto">VIGA LAJE</td>
+                            <td data-label="Data">29/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 36,64</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">O FERREIRÃO</td>
+                            <td data-label="Produto">VIGA LAJE</td>
+                            <td data-label="Data">29/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 14,46</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">O FERREIRÃO</td>
+                            <td data-label="Produto">VIGA LAJE</td>
+                            <td data-label="Data">29/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 14,46</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">O FERREIRÃO</td>
+                            <td data-label="Produto">VIGA LAJE</td>
+                            <td data-label="Data">29/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 58,92</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">O FERREIRÃO</td>
+                            <td data-label="Produto">VIGA LAJE</td>
+                            <td data-label="Data">29/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 41,14</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">O FERREIRÃO</td>
+                            <td data-label="Produto">VIGA LAJE</td>
+                            <td data-label="Data">29/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 41,14</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">O FERREIRÃO</td>
+                            <td data-label="Produto">LAJE</td>
+                            <td data-label="Data">29/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 280,24</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MADEFORT</td>
+                            <td data-label="Produto">PEÇA 5X14 MISTA 4MT</td>
+                            <td data-label="Data">-</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 567,86</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MADEFORT</td>
+                            <td data-label="Produto">PEÇA 5X14 MISTA 5MT</td>
+                            <td data-label="Data">-</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.544,01</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MADEFORT</td>
+                            <td data-label="Produto">PEÇA 5X14 MISTA 4.5MT</td>
+                            <td data-label="Data">-</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 893,25</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MADEFORT</td>
+                            <td data-label="Produto">PEÇA 5X14 MISTA 3.50MT</td>
+                            <td data-label="Data">-</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 106,97</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MADEFORT</td>
+                            <td data-label="Produto">PEÇA 5X20 MISTA 7MT</td>
+                            <td data-label="Data">-</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 493,51</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MADEFORT</td>
+                            <td data-label="Produto">PEÇA 5X20 MISTA 4.50MT</td>
+                            <td data-label="Data">-</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 102,43</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MADEFORT</td>
+                            <td data-label="Produto">PEÇA 5X25 MISTA 4.50MT</td>
+                            <td data-label="Data">-</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 148,37</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MADEFORT</td>
+                            <td data-label="Produto">CAIBRO 5X3 MISTO 4MT</td>
+                            <td data-label="Data">-</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 287,97</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MADEFORT</td>
+                            <td data-label="Produto">CAIBRO 5X3 MISTO 5.5MT</td>
+                            <td data-label="Data">-</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 257,07</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MADEFORT</td>
+                            <td data-label="Produto">CAIBRO 5X3 MISTO 6MT</td>
+                            <td data-label="Data">-</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 807,09</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MADEFORT</td>
+                            <td data-label="Produto">CAIBRO 5X3 MISTO 3MT</td>
+                            <td data-label="Data">-</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 362,13</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MADEFORT</td>
+                            <td data-label="Produto">RIPA MISTA NATIVA 5X1,2</td>
+                            <td data-label="Data">-</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.142,17</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                <div class="resp-bloco">
+                    <div class="resp-bloco-titulo">
+                        <span class="etapa-color" style="background:#FFC000;"></span>
+                        Acabamento
+                        <span class="resp-bloco-total">R$ 13.239,96</span>
+                    </div>
+                    <div class="table-wrapper" style="border:none; border-radius:0;">
+                    <table class="materiais-table tabela-empilhavel">
+                        <thead>
+                            <tr><th>Fornecedor</th><th>Produto</th><th>Data</th><th>Status</th><th>Valor</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Fornecedor">BERNADINO MADEIRAS</td>
+                            <td data-label="Produto">ALIZAR 7CM ANG</td>
+                            <td data-label="Data">10/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 275,50</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BERNADINO MADEIRAS</td>
+                            <td data-label="Produto">PREGO 12X12 SEM</td>
+                            <td data-label="Data">10/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 17,50</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">CASA NOVA</td>
+                            <td data-label="Produto">ATLAS DISCO DE LIXA TELADA 225 GRAO 150</td>
+                            <td data-label="Data">04/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 100,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">CASA NOVA</td>
+                            <td data-label="Produto">ATLAS ROLO DE PINTURA ANTIGOTAS POLIAMIDA 23CM 321</td>
+                            <td data-label="Data">04/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 30,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">CASA NOVA</td>
+                            <td data-label="Produto">ATLAS ROLO DE PINTURA LA 9CM AT228</td>
+                            <td data-label="Data">04/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 11,90</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">CASA NOVA</td>
+                            <td data-label="Produto">ATLAS PINCEL 1 1/2 319 PINT. ESMALTE SINTETICO</td>
+                            <td data-label="Data">04/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 8,10</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
+                            <td data-label="Produto">TINTA STANDARD NEVE</td>
+                            <td data-label="Data">04/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 420,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
+                            <td data-label="Produto">TINTA ECONOMICA NEVE</td>
+                            <td data-label="Data">04/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 270,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
+                            <td data-label="Produto">AC 2 BONFILIT</td>
+                            <td data-label="Data">01/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 111,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
+                            <td data-label="Produto">AC 1 BONFILIT</td>
+                            <td data-label="Data">01/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 25,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">LOPES MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">DISCO DE CORTE DIAM PORCELANATO</td>
+                            <td data-label="Data">25/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 42,69</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">LOPES MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">MASSA PLASTICA BRANCA 1KG MAZA</td>
+                            <td data-label="Data">25/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 26,64</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
+                            <td data-label="Produto">AC 2 BONFILIT</td>
+                            <td data-label="Data">25/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 555,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
+                            <td data-label="Produto">REJUNTE BRANCO</td>
+                            <td data-label="Data">25/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 17,25</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
+                            <td data-label="Produto">REJUNTE PLATINA</td>
+                            <td data-label="Data">25/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 17,25</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MYSA S/a</td>
+                            <td data-label="Produto">CERÂMICA</td>
+                            <td data-label="Data">24/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 663,20</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">LOPES MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">PISO INOUT 74X74 RT 2,19</td>
+                            <td data-label="Data">24/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 123,95</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">LOPES MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">PISO INOUT 74X74 RT A 2,19</td>
+                            <td data-label="Data">24/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 123,95</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">ESPAÇADOR SLIM</td>
+                            <td data-label="Data">23/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 150,30</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CUNHA SLIM</td>
+                            <td data-label="Data">23/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 103,10</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">DISCO PORCELANATO</td>
+                            <td data-label="Data">23/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 53,30</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">DISCO CONCRETO</td>
+                            <td data-label="Data">23/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 29,30</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
+                            <td data-label="Produto">AC 2 BONFILIT</td>
+                            <td data-label="Data">23/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 925,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
+                            <td data-label="Produto">MASSA ACRÍLICA</td>
+                            <td data-label="Data">22/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 960,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">RIO BRAVO</td>
+                            <td data-label="Produto">MASSA CORRIDA PVA ECOMASSA 20KG</td>
+                            <td data-label="Data">21/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 240,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">RIO BRAVO</td>
+                            <td data-label="Produto">MASSA CORRIDA PVA ECOMASSA 20KG</td>
+                            <td data-label="Data">17/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 480,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BN PRÉ MOLDADOS</td>
+                            <td data-label="Produto">PISO TATIL 25X25X2,5 NATURAL ALERTA</td>
+                            <td data-label="Data">17/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 120,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BN PRÉ MOLDADOS</td>
+                            <td data-label="Produto">PISO TATIL 25X25X2,5 NATURAL DIRECIONAL</td>
+                            <td data-label="Data">17/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 180,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">LOPES MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">PISO 74X74 BT C 2,19</td>
+                            <td data-label="Data">14/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 4.034,30</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">LOPES MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">PISO 74X74 BT C 2,19</td>
+                            <td data-label="Data">14/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 247,91</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">LOPES MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">PISO 74X74 BT C 2,19</td>
+                            <td data-label="Data">14/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 247,91</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">LOPES MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">PISO 70X70 A RT 3,45</td>
+                            <td data-label="Data">14/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 842,24</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">VG GRANITOS E PORCELANATOS</td>
+                            <td data-label="Produto">SOLEIRAS JANELAS E PORTAS DE ENTRADA E SAÍDA</td>
+                            <td data-label="Data">14/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 493,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">VG GRANITOS E PORCELANATOS</td>
+                            <td data-label="Produto">FILETES DE RETENÇÃO DE ÁGUA PORCIMA DAS SOLEIRAS</td>
+                            <td data-label="Data">14/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 187,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">VEDAPREN 18L</td>
+                            <td data-label="Data">01/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 290,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">TRINCHAS</td>
+                            <td data-label="Data">01/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 48,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">KG DE PREGO 15X15</td>
+                            <td data-label="Data">01/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 52,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">DISCO DE MADEIRA</td>
+                            <td data-label="Data">01/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 22,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">DISCO PARA CONCRETO</td>
+                            <td data-label="Data">01/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 66,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">PARAFUSO 5/8X6</td>
+                            <td data-label="Data">01/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 19,30</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">BROCA PARA CONCRETO 4 IRWIN</td>
+                            <td data-label="Data">01/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 7,20</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CAIXA DE CORREIO</td>
+                            <td data-label="Data">25/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 46,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">ARGAMASSA AC III</td>
+                            <td data-label="Data">25/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 100,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MADEFORT</td>
+                            <td data-label="Produto">PORTAL NATIVO</td>
+                            <td data-label="Data">-</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 457,17</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                <div class="resp-bloco">
+                    <div class="resp-bloco-titulo">
+                        <span class="etapa-color" style="background:#E67E22;"></span>
+                        Elétrica
+                        <span class="resp-bloco-total">R$ 11.270,17</span>
+                    </div>
+                    <div class="table-wrapper" style="border:none; border-radius:0;">
+                    <table class="materiais-table tabela-empilhavel">
+                        <thead>
+                            <tr><th>Fornecedor</th><th>Produto</th><th>Data</th><th>Status</th><th>Valor</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Fornecedor">MERCADO LIVRE</td>
+                            <td data-label="Produto">LUSTRE ARANDELA E LAMPADA</td>
+                            <td data-label="Data">07/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 365,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ABC COMERCIAL DE FERRAGENS</td>
+                            <td data-label="Produto">LUMINÁRIA BA</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 68,73</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ABC COMERCIAL DE FERRAGENS</td>
+                            <td data-label="Produto">LUMINÁRIA BA</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 79,82</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ABC COMERCIAL DE FERRAGENS</td>
+                            <td data-label="Produto">REFLETOR SL</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 103,02</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">DMC MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">DISJUNTOR MONOPOLAR BRANCO 16 A</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 5,43</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">DMC MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">DISJUNTOR MONOPOLAR BRANCO 40 A</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 20,43</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">DMC MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">DISJUNTOR MONOPOLAR BRANCO 25 A</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 32,43</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">DMC MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">DISJUNTOR MONOPOLAR BRANCO 32 A</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 14,43</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">DMC MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">TOMADA 2 P + T POLLAR 10 A RADIAL</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 164,63</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">DMC MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">INTERRUPTOR + TOMADA POLLAR RADIAL</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 6,43</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">DMC MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">INTERRUPTOR 1 TECLA POLLAR RADIAL</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1,43</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">DMC MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">INTERRUPTOR 2 TECLAS POLLAR RADIAL</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 14,43</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">DMC MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">PLACA CEGA 4X4 S/ FURO RADIAL</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 26,36</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">DMC MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">CHUVEIRO ELÉTRICO</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 211,05</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">DMC MATERIAL DE CONSTRUÇÃO</td>
+                            <td data-label="Produto">INTERRUPTOR 3 TECLAS</td>
+                            <td data-label="Data">31/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 33,95</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">LACERDA SOLUÇÕES ELÉTRICAS</td>
+                            <td data-label="Produto">FIOS</td>
+                            <td data-label="Data">30/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.878,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">LACERDA SOLUÇÕES ELÉTRICAS</td>
+                            <td data-label="Produto">ARANDELA E LED</td>
+                            <td data-label="Data">30/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 448,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ELETRICISTA</td>
+                            <td data-label="Produto">FIO</td>
+                            <td data-label="Data">25/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.878,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ELETRICISTA</td>
+                            <td data-label="Produto">MÃO DE OBRA</td>
+                            <td data-label="Data">25/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 750,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ELETRICISTA</td>
+                            <td data-label="Produto">ARANDELAS E LEDS</td>
+                            <td data-label="Data">25/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 450,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MEGATRON TECNOLOGIA ELETRO</td>
+                            <td data-label="Produto">PASSAGEM DE CABOS</td>
+                            <td data-label="Data">16/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 180,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MEGATRON TECNOLOGIA ELETRO</td>
+                            <td data-label="Produto">CABO DE REDE</td>
+                            <td data-label="Data">16/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 122,50</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">PLUG F 20A</td>
+                            <td data-label="Data">15/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 12,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CAIXINHAS</td>
+                            <td data-label="Data">03/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 100,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">JOELHO 45º 100</td>
+                            <td data-label="Data">03/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 14,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">ROLO DE FIO 2,5</td>
+                            <td data-label="Data">03/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.320,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">ROLO DE FIO 1,5</td>
+                            <td data-label="Data">03/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 900,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">ROLO DE FIO 4,0</td>
+                            <td data-label="Data">03/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 788,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">ROLO DE FIO 6,0</td>
+                            <td data-label="Data">03/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 576,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">MANGUEIRA CORRUGADA</td>
+                            <td data-label="Data">01/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 160,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">KIT COMPLETO PADRÃO MONOFASICO</td>
+                            <td data-label="Data">25/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 179,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">QUADRO DE DISTRIBUIÇÃO 8D</td>
+                            <td data-label="Data">25/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 68,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">QUADRO DE DISTRIBUIÇÃO 4D</td>
+                            <td data-label="Data">25/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 47,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CAIXA DE LUZ 4X2 PRETA</td>
+                            <td data-label="Data">23/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 89,10</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">TINTA SPRAY</td>
+                            <td data-label="Data">09/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 24,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ABC COMERCIAL DE FERRAGENS</td>
+                            <td data-label="Produto">CONDUITE CO</td>
+                            <td data-label="Data">08/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 139,00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                <div class="resp-bloco">
+                    <div class="resp-bloco-titulo">
+                        <span class="etapa-color" style="background:#4472C4;"></span>
+                        Fundação
+                        <span class="resp-bloco-total">R$ 9.535,00</span>
+                    </div>
+                    <div class="table-wrapper" style="border:none; border-radius:0;">
+                    <table class="materiais-table tabela-empilhavel">
+                        <thead>
+                            <tr><th>Fornecedor</th><th>Produto</th><th>Data</th><th>Status</th><th>Valor</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Fornecedor">MIX MATERIAIS PARA CONST.</td>
+                            <td data-label="Produto">IMPERMEABILIZANTE ASFALTO FRI</td>
+                            <td data-label="Data">28/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 180,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ELP MENDES COMERCIAL LTDA</td>
+                            <td data-label="Produto">BARRA 5X16</td>
+                            <td data-label="Data">20/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 320,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">ARAME RECOZIDO TORCIDO</td>
+                            <td data-label="Data">15/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 84,50</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">PREGO 17X21</td>
+                            <td data-label="Data">15/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 84,50</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">AREAL RUA NOVA</td>
+                            <td data-label="Produto">AREIA</td>
+                            <td data-label="Data">08/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 850,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">AREAL RUA NOVA</td>
+                            <td data-label="Produto">BRITA</td>
+                            <td data-label="Data">08/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.766,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">DIEGO RAMON</td>
+                            <td data-label="Produto">REBAIXAMENTO TERRENO</td>
+                            <td data-label="Data">08/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.600,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MULTI AÇO</td>
+                            <td data-label="Produto">BARRA 5x16</td>
+                            <td data-label="Data">08/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 228,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">MULTI AÇO</td>
+                            <td data-label="Produto">COLUNA 7X17</td>
+                            <td data-label="Data">08/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 822,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">O FERREIRÃO</td>
+                            <td data-label="Produto">CIMENTO</td>
+                            <td data-label="Data">08/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 3.600,00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                <div class="resp-bloco">
+                    <div class="resp-bloco-titulo">
+                        <span class="etapa-color" style="background:#2980B9;"></span>
+                        Hidráulica
+                        <span class="resp-bloco-total">R$ 3.193,22</span>
+                    </div>
+                    <div class="table-wrapper" style="border:none; border-radius:0;">
+                    <table class="materiais-table tabela-empilhavel">
+                        <thead>
+                            <tr><th>Fornecedor</th><th>Produto</th><th>Data</th><th>Status</th><th>Valor</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Fornecedor">EMBASA</td>
+                            <td data-label="Produto">CONTA DE ÁGUA</td>
+                            <td data-label="Data">24/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 168,55</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">JOELHO ESGOTO 50</td>
+                            <td data-label="Data">15/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 28,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">TAMPÃO DE 100</td>
+                            <td data-label="Data">15/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 12,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">JOELHO ESGOTO 50</td>
+                            <td data-label="Data">15/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 7,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">TAMPÃO DE 25</td>
+                            <td data-label="Data">15/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 2,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">VARA DE CANO DE 20</td>
+                            <td data-label="Data">15/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 50,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">TUBO ESGOTO 100</td>
+                            <td data-label="Data">08/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 358,90</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">TUBO ESGOTO 50</td>
+                            <td data-label="Data">08/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 115,10</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">ANEL</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 4,91</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">JOELHO ESGOTO 40</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 9,71</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CAIXA GORDURA COM CESTO</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 121,61</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">FLANG 25</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 8,61</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">FLANG 20</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 7,61</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">BOIA</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 11,61</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">PLUG 1/2</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 6,71</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">TUBO 20</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 16,61</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">TUBO 25</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 89,31</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">TUBO 50</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 169,51</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">LIXA FERRO 100</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 2,21</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">ADESIVO 850G</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 44,61</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">JOELHO ESGOTO 100</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 15,41</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">T ESGOTO</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 25,51</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">REDUÇÃO ESGOTO 50-40</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 15,11</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">JOELHO ESGOTO 45 40</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 12,21</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CAIXA SIFÃO 100-50</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 117,11</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">T 50</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 39,11</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">T 40</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 15,11</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">TUBO 40</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 123,41</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">TUBO 100</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 183,51</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">REGISTRO GAVETA</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 177,41</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">REGISTRO PRESSÃO</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 117,51</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CURVA 25</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 36,71</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">JOELHO 25</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1,85</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">JOELHO AC 25 1/2</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 56,71</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">TAC 25 1/2</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 51,11</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">ADAPTADOR CURTO 25 3/4</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 3,23</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">LUVA LR AC 25 3/4</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 13,51</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CURVA 20</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 15,11</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">T 20</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1,38</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">JOELHO AC 20 1/2</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1,32</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">VEDA ROSCA 50 M</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 29,51</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">T 50</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 33,31</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CURVA 50</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 48,41</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">JOELHO 50</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 7,51</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">T 50X25</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 6,61</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">REGISTRO V5 50</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 22,58</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">FLANG 50</td>
+                            <td data-label="Data">06/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 35,41</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">CAIXA EMBASA</td>
+                            <td data-label="Data">25/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 34,90</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">EMBASA</td>
+                            <td data-label="Produto">CONTA DE ÁGUA</td>
+                            <td data-label="Data">07/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 299,07</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ABC COMERCIAL DE FERRAGENS</td>
+                            <td data-label="Produto">ESGUICHO P/ MANQUEIRAS COLORIDO KRONA</td>
+                            <td data-label="Data">11/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 5,16</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ABC COMERCIAL DE FERRAGENS</td>
+                            <td data-label="Produto">MANGUEIRA P/ JARDIM FLEX 1/2 VERDE TRAMONTINA</td>
+                            <td data-label="Data">11/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 71,85</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">ABC COMERCIAL DE FERRAGENS</td>
+                            <td data-label="Produto">CAIXA DAGUA POLIETILENO 1000L MAXFORT</td>
+                            <td data-label="Data">11/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 341,99</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                <div class="resp-bloco">
+                    <div class="resp-bloco-titulo">
+                        <span class="etapa-color" style="background:#8E44AD;"></span>
+                        Serralheiro
+                        <span class="resp-bloco-total">R$ 1.850,00</span>
+                    </div>
+                    <div class="table-wrapper" style="border:none; border-radius:0;">
+                    <table class="materiais-table tabela-empilhavel">
+                        <thead>
+                            <tr><th>Fornecedor</th><th>Produto</th><th>Data</th><th>Status</th><th>Valor</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Fornecedor">ADEILDE MARCELINO LAGO</td>
+                            <td data-label="Produto">PORTÃO 3X2.10 COM LAMBRIL QUADRADO</td>
+                            <td data-label="Data">-</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.850,00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                <div class="resp-bloco">
+                    <div class="resp-bloco-titulo">
+                        <span class="etapa-color" style="background:#C0392B;"></span>
+                        Equipamento
+                        <span class="resp-bloco-total">R$ 1.817,70</span>
+                    </div>
+                    <div class="table-wrapper" style="border:none; border-radius:0;">
+                    <table class="materiais-table tabela-empilhavel">
+                        <thead>
+                            <tr><th>Fornecedor</th><th>Produto</th><th>Data</th><th>Status</th><th>Valor</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">VASSORA</td>
+                            <td data-label="Data">20/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 24,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">GALPÃO DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">LUVA</td>
+                            <td data-label="Data">20/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 9,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">CASA DO CONSTRUTOR</td>
+                            <td data-label="Produto">COMPACTADOR</td>
+                            <td data-label="Data">23/06/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 250,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">LINHA PEDREIRO NAYLON COLORIDA</td>
+                            <td data-label="Data">19/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 10,90</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
+                            <td data-label="Produto">DISCO SERRA DE VIDEA 4.1/2 P</td>
+                            <td data-label="Data">14/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 33,80</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">CASA DO CONSTRUTOR</td>
+                            <td data-label="Produto">ALUGUEL BETONEIRA</td>
+                            <td data-label="Data">13/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 490,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">-</td>
+                            <td data-label="Produto">CARRINHO REFORÇADO</td>
+                            <td data-label="Data">13/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 777,46</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">-</td>
+                            <td data-label="Produto">ENXADA TRAMONTINA</td>
+                            <td data-label="Data">13/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 121,27</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">-</td>
+                            <td data-label="Produto">PÁ TRAMONTINA</td>
+                            <td data-label="Data">13/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 101,27</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                <div class="resp-bloco">
+                    <div class="resp-bloco-titulo">
+                        <span class="etapa-color" style="background:#34495E;"></span>
+                        Documentação
+                        <span class="resp-bloco-total">R$ 1.623,39</span>
+                    </div>
+                    <div class="table-wrapper" style="border:none; border-radius:0;">
+                    <table class="materiais-table tabela-empilhavel">
+                        <thead>
+                            <tr><th>Fornecedor</th><th>Produto</th><th>Data</th><th>Status</th><th>Valor</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Fornecedor">FELIPE TIGRE</td>
+                            <td data-label="Produto">ENGENHEIRO</td>
+                            <td data-label="Data">07/08/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 150,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">PAJÉ EMPREENDIMENTOS</td>
+                            <td data-label="Produto">CESSÃO DE DIREITOS B77 CIDADEL</td>
+                            <td data-label="Data">22/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 350,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">CENTER CÓPIAS</td>
+                            <td data-label="Produto">IMPRESSÃO E PLASTIFICAÇÃO PROJETO</td>
+                            <td data-label="Data">19/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 15,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">FELIPE TIGRE</td>
+                            <td data-label="Produto">ENGENHEIRO</td>
+                            <td data-label="Data">11/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 1.000,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">-</td>
+                            <td data-label="Produto">ART</td>
+                            <td data-label="Data">08/05/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 108,39</td>
+                        </tr>
                         </tbody>
                     </table>
                     </div>
@@ -4586,13 +6420,6 @@
                             <tr><th>Fornecedor</th><th>Etapa</th><th>Data</th><th>Status</th><th>Valor</th></tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td data-label="Fornecedor">IVAN</td>
-                            <td data-label="Etapa">Acabamento</td>
-                            <td data-label="Data">22/09/2026</td>
-                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
-                            <td class="mat-num" data-label="Valor">R$ 960,00</td>
-                        </tr>
                         <tr>
                             <td data-label="Fornecedor">EMBASA</td>
                             <td data-label="Etapa">Hidráulica</td>
@@ -4657,14 +6484,14 @@
                             <td class="mat-num" data-label="Valor">R$ 8,10</td>
                         </tr>
                         <tr>
-                            <td data-label="Fornecedor">IVAN</td>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
                             <td data-label="Etapa">Acabamento</td>
                             <td data-label="Data">04/08/2026</td>
                             <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
                             <td class="mat-num" data-label="Valor">R$ 420,00</td>
                         </tr>
                         <tr>
-                            <td data-label="Fornecedor">IVAN</td>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
                             <td data-label="Etapa">Acabamento</td>
                             <td data-label="Data">04/08/2026</td>
                             <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
@@ -4846,21 +6673,21 @@
                             <td class="mat-num" data-label="Valor">R$ 26,64</td>
                         </tr>
                         <tr>
-                            <td data-label="Fornecedor">IVAN</td>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
                             <td data-label="Etapa">Acabamento</td>
                             <td data-label="Data">25/07/2026</td>
                             <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
                             <td class="mat-num" data-label="Valor">R$ 555,00</td>
                         </tr>
                         <tr>
-                            <td data-label="Fornecedor">IVAN</td>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
                             <td data-label="Etapa">Acabamento</td>
                             <td data-label="Data">25/07/2026</td>
                             <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
                             <td class="mat-num" data-label="Valor">R$ 17,25</td>
                         </tr>
                         <tr>
-                            <td data-label="Fornecedor">IVAN</td>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
                             <td data-label="Etapa">Acabamento</td>
                             <td data-label="Data">25/07/2026</td>
                             <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
@@ -4923,11 +6750,18 @@
                             <td class="mat-num" data-label="Valor">R$ 29,30</td>
                         </tr>
                         <tr>
-                            <td data-label="Fornecedor">IVAN</td>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
                             <td data-label="Etapa">Acabamento</td>
                             <td data-label="Data">23/07/2026</td>
                             <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
                             <td class="mat-num" data-label="Valor">R$ 925,00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Fornecedor">IVAN BONFILIT</td>
+                            <td data-label="Etapa">Acabamento</td>
+                            <td data-label="Data">22/07/2026</td>
+                            <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
+                            <td class="mat-num" data-label="Valor">R$ 960,00</td>
                         </tr>
                         <tr>
                             <td data-label="Fornecedor">RIO BRAVO</td>
@@ -5820,7 +7654,7 @@
                         </tr>
                         <tr>
                             <td data-label="Fornecedor">BAZAR DA CONSTRUÇÃO</td>
-                            <td data-label="Etapa">FUNDAÇÃA</td>
+                            <td data-label="Etapa">Fundação</td>
                             <td data-label="Data">15/05/2026</td>
                             <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
                             <td class="mat-num" data-label="Valor">R$ 84,50</td>
@@ -6151,7 +7985,7 @@
                         <tbody>
                         <tr>
                             <td data-label="Fornecedor">MERCADO LIVRE</td>
-                            <td data-label="Etapa">ELÉTRICO</td>
+                            <td data-label="Etapa">Elétrica</td>
                             <td data-label="Data">07/08/2026</td>
                             <td data-label="Status"><span class="resp-status resp-status-pago">Pago</span></td>
                             <td class="mat-num" data-label="Valor">R$ 365,00</td>
@@ -6182,7 +8016,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer">Relatório gerado em 18/08/2026 às 18:57</div>
+            <div class="footer">Relatório gerado em 19/08/2026 às 12:52</div>
         </div>
     </div>
     <script>
