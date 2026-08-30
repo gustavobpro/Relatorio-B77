@@ -1,0 +1,39 @@
+name: Atualizar Relatório B77
+
+on:
+  schedule:
+    - cron: '*/20 * * * *'   # roda sozinho a cada 20 minutos
+  workflow_dispatch: {}       # também permite rodar manualmente (botão "Run workflow")
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependências
+        run: pip install openpyxl
+
+      - name: Baixar planilha atualizada do Google Drive
+        run: |
+          curl -L "https://docs.google.com/spreadsheets/d/1K4ByEd3hK18Av8leVhiBxEPGmP91f_VuueyEgALCnGI/export?format=xlsx" -o planilha.xlsx
+
+      - name: Gerar relatório atualizado
+        run: python gerar_relatorio.py planilha.xlsx B77 index.html
+
+      - name: Publicar automaticamente (só se algo mudou)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --staged --quiet || git commit -m "Atualização automática do relatório B77"
+          git push
